@@ -8,34 +8,34 @@ let attempts = 0; //tentatives en anglais
 let condition = true;
 
 while (condition) {
-  const choose = Number(prompt("Choisissez un nombre : "));
-  console.log(choose);
+  const choose = Number(prompt("\nChoisissez un nombre : "));
+  //console.log(choose);
 
   if (isNaN(choose)) {
-    console.log("Veuillez entrer un nombre correct : ");
+    console.log("Veuillez entrer un nombre correct\n");
   }
 
   if (choose > 100) {
-    console.log("Veuillez choisir un nombre entre 0 et 100");
+    console.log("Veuillez choisir un nombre entre 0 et 100\n");
   }
 
   if (choose < 0) {
-    console.log("Veuillez choisir un nombre entre 0 et 100");
+    console.log("Veuillez choisir un nombre entre 0 et 100\n");
   }
 
-  if (choose > targetNumber) {
-    console.log("Trop grand");
+  if (choose > targetNumber && choose <= 100) {
+    console.log("Trop grand\n");
   }
 
-  if (choose < targetNumber) {
-    console.log("Trop petit");
+  if (choose < targetNumber && choose >= 0) {
+    console.log("Trop petit\n");
   }
 
   attempts++;
 
   if (choose === targetNumber) {
     console.log(
-      "Bravo ! fin de la partie, votre nombre d'essai est de " + attempts
+      "Bravo ! fin de la partie, votre nombre d'essai est de " + attempts + "\n"
     );
     condition = false;
   }
